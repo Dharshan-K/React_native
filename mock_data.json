@@ -1,32 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Image, SafeAreaView, Button, TouchableHighlight, FlatList,TouchableOpacity } from 'react-native';
-import React, { Component } from 'react';
-
-
-
-function Item({ item }) {
-  return (
-    <View style={styles.listItem}>
-      <Image source={{uri:item.image}}  style={{width:60, height:60,borderRadius:30}} />
-      <View style={{alignItems:"center",flex:1}}>
-        <Text style={{fontWeight:"bold"}}>{item.gender == 'Male'?<Text>Mr.</Text>:<Text>Mrs.</Text>} {item.first_name} {item.last_name}</Text>
-        <Text>{item.description}</Text>
-      </View>
-      {/* <TouchableOpacity style={{height:50,width:50, justifyContent:"center",alignItems:"center"}}>
-        <Text style={{color:"green"}}>Call</Text>
-      </TouchableOpacity> */}
-      
-    </View>
-
-
-  );
-}
-
-
-export default class App extends React.Component {
-  state = {
-    data:[
-        {"id":1,"first_name":"Mitchael","last_name":"Grishunin","email":"mgrishunin0@constantcontact.com","gender":"Male","latitude":-23.5586314,"longitude":-51.4650904,"description":"Fracture of alveolus of mandible, unspecified side, 7thK","image":"https://robohash.org/autipsamomnis.jpg?size=50x50&set=set1"},
+[{"id":1,"first_name":"Mitchael","last_name":"Grishunin","email":"mgrishunin0@constantcontact.com","gender":"Male","latitude":-23.5586314,"longitude":-51.4650904,"description":"Fracture of alveolus of mandible, unspecified side, 7thK","image":"https://robohash.org/autipsamomnis.jpg?size=50x50&set=set1"},
 {"id":2,"first_name":"Seamus","last_name":"MacGilrewy","email":"smacgilrewy1@oakley.com","gender":"Male","latitude":-9.0933664,"longitude":124.8905151,"description":"Mech compl of cardiac pulse generator (battery), init encntr","image":"https://robohash.org/quiaquiqui.png?size=50x50&set=set1"},
 {"id":3,"first_name":"Byron","last_name":"MacPharlain","email":"bmacpharlain2@webs.com","gender":"Male","latitude":18.594395,"longitude":-72.3074326,"description":"Hypertrophy of tongue papillae","image":"https://robohash.org/eiusharumlibero.bmp?size=50x50&set=set1"},
 {"id":4,"first_name":"Zackariah","last_name":"Brumby","email":"zbrumby3@geocities.jp","gender":"Male","latitude":33.267964,"longitude":116.557663,"description":"Malignant neoplasm of undescended testis","image":"https://robohash.org/suntquoiste.bmp?size=50x50&set=set1"},
@@ -125,43 +97,4 @@ export default class App extends React.Component {
 {"id":97,"first_name":"Lilia","last_name":"Boosey","email":"lboosey2o@biglobe.ne.jp","gender":"Female","latitude":27.861901,"longitude":83.5443287,"description":"Partial retinal artery occlusion, right eye","image":"https://robohash.org/optioveroratione.png?size=50x50&set=set1"},
 {"id":98,"first_name":"Fabio","last_name":"Makepeace","email":"fmakepeace2p@tamu.edu","gender":"Male","latitude":-7.5242554,"longitude":108.9145675,"description":"Passenger of amblnc/fire eng injured nontraf, sequela","image":"https://robohash.org/etimpeditquae.bmp?size=50x50&set=set1"},
 {"id":99,"first_name":"Dennison","last_name":"Skitteral","email":"dskitteral2q@dell.com","gender":"Male","latitude":51.3842543,"longitude":58.9999439,"description":"Nondisp posterior arch fracture of first cervcal vertebra","image":"https://robohash.org/idetaut.png?size=50x50&set=set1"},
-{"id":100,"first_name":"Sholom","last_name":"Gaffey","email":"sgaffey2r@clickbank.net","gender":"Male","latitude":24.822233,"longitude":103.985321,"description":"Nondisp artic fx head of unsp femr, init for opn fx type I/2","image":"https://robohash.org/minimaquiarchitecto.png?size=50x50&set=set1"}
-    ]
-
-    
-  }
-
-
-  render(){
-    return (
-      <View style={styles.container}>
-        <FlatList
-          style={{flex:1}}
-          data={this.state.data}
-          renderItem={({ item }) => <Item item={item}/>}
-          keyExtractor={item => item.email}
-        />
-      </View>
-        
-    );
-  };
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F7F7F7',
-    marginTop:60
-  },
-  listItem:{
-    margin:10,
-    padding:10,
-    backgroundColor:"#FFF",
-    width:"80%",
-    flex:1,
-    alignSelf:"center",
-    flexDirection:"row",
-    borderRadius:5
-  }
-});
-
+{"id":100,"first_name":"Sholom","last_name":"Gaffey","email":"sgaffey2r@clickbank.net","gender":"Male","latitude":24.822233,"longitude":103.985321,"description":"Nondisp artic fx head of unsp femr, init for opn fx type I/2","image":"https://robohash.org/minimaquiarchitecto.png?size=50x50&set=set1"}]
